@@ -1,0 +1,4 @@
+/* IR Default Child 1.0.0 — inherits everything from ir-default, overrides accents. */
+body.theme-ir-child{--ij-primary:#db2777}
+body.theme-ir-child .article{border-top:4px solid var(--ij-primary)}
+.ij-child-banner{background:linear-gradient(90deg,#fce7f3,#e0e7ff);border:1px solid #f9a8d4;color:#831843;border-radius:12px;padding:10px 18px;font-size:13px;margin-bottom:18px}

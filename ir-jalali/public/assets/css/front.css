@@ -1,0 +1,29 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Tahoma,'Segoe UI',sans-serif;background:#f7f8fd;color:#1c2240;line-height:2}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.site-head{background:#141a38;color:#fff;position:sticky;top:0;z-index:10}
+.head-in{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.logo{color:#fff;text-decoration:none;font-weight:700;font-size:18px;display:flex;align-items:center;gap:10px}
+.mark{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,#8b5cf6,#22d3ee)}
+.menu{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.menu a{color:#c3c9ee;text-decoration:none;padding:8px 14px;border-radius:8px;font-size:13.5px}
+.menu a:hover{background:rgba(255,255,255,.1);color:#fff}
+.menu a.login{border:1px solid rgba(255,255,255,.25)}
+.hero{text-align:center;padding:70px 20px 50px}
+.hero h1{font-size:34px;margin-bottom:10px}
+.hero p{color:#7a84a6}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding-bottom:60px}
+.pcard{background:#fff;border:1px solid #e3e7f2;border-radius:16px;padding:26px;text-decoration:none;color:inherit;transition:.25s;display:block}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(80,70,180,.35)}
+.pcard h3{font-size:17px;margin-bottom:8px;color:#4c1d95}
+.pcard p{font-size:13.5px;color:#7a84a6}
+.sec{font-size:19px;margin:10px 0 18px;padding-top:10px}
+.article{background:#fff;border:1px solid #e3e7f2;border-radius:18px;padding:44px;margin:36px 0 60px}
+.article h1{font-size:27px;margin-bottom:6px}
+.article .meta{color:#7a84a6;font-size:13px;margin-bottom:24px}
+.article .body{font-size:15px}
+.site-foot{background:#141a38;color:#8b93c9;padding:22px 0;font-size:13px;text-align:center}
+.site-foot b{color:#fff}
+.err{text-align:center;padding:90px 20px}
+.err h1{font-size:60px;color:#7c3aed}
+@media(max-width:600px){.hero h1{font-size:25px}.article{padding:26px 20px}}

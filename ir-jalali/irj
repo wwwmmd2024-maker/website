@@ -1,0 +1,54 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * IR-Jalali CLI entry point.
+ *
+ * Usage: php irj <command> [args] [--option=value]
+ */
+
+$basePath = __DIR__;
+
+require $basePath . '/core/Kernel/Autoloader.php';
+
+use IRJalali\Core\Console\Kernel;
+use IRJalali\Core\Console\Output;
+use IRJalali\Core\Kernel\Application;
+use IRJalali\Core\Kernel\Autoloader;
+
+Autoloader::register($basePath);
+
+$app = Application::boot($basePath);
+$out = new Output();
+$kernel = new Kernel($app, $out);
+
+$kernel->register(IRJalali\App\Console\Commands\InstallCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\MigrateCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\CacheClearCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\PluginListCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\PluginInstallCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\PluginActivateCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\PluginDeactivateCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\PluginUpdateCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\PluginRemoveCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\ThemeListCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\ThemeActivateCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\UserCreateCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\MakePluginCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\MakeThemeCommand::class);
+$kernel->register(IRJalali\App\Console\Commands\MakeBlockCommand::class);
+
+// Boot active plugins so their CLI commands become available.
+if ($app->isInstalled()) {
+    try {
+        $plugins = $app->make(IRJalali\Core\Plugins\PluginManager::class);
+        $plugins->discover();
+        $plugins->boot();
+    } catch (\Throwable $e) {
+        $out->warning('Plugin boot failed: ' . $e->getMessage());
+    }
+}
+
+exit($kernel->run($argv));

@@ -1,0 +1,11 @@
+# IR-Jalali — project root protection.
+# Point your domain's DocumentRoot to /public. If your host forces the
+# domain to this directory, uncomment the block below to route via public/.
+<FilesMatch "^(\.env|composer\.json|composer\.lock)$">
+    Require all denied
+</FilesMatch>
+
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteRule ^(.*)$ public/$1 [L]
+# </IfModule>

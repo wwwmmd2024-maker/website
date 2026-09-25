@@ -1,0 +1,14 @@
+{
+  "slug": "ir-smtp",
+  "name": "IR SMTP",
+  "version": "1.0.0",
+  "description": "زیرساخت ایمیل: ارسال با SMTP (با صف، قالب و لاگ). افزونه‌های دیگر برای ارسال ایمیل به این ماژول وابسته‌اند.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "communication",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write", "network.request"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrSmtp\\": "" } }
+}

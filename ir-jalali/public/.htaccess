@@ -1,0 +1,17 @@
+# IR-Jalali — Apache rewrite (DocumentRoot must be /public)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Block sensitive files
+<FilesMatch "^\.env$">
+    Require all denied
+</FilesMatch>
+
+# Uploaded files: never execute PHP from uploads
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>

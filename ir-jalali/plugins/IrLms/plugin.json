@@ -1,0 +1,14 @@
+{
+  "slug": "ir-lms",
+  "name": "IR LMS",
+  "version": "1.0.0",
+  "description": "آموزش آنلاین: دوره و درس، ثبت‌نام در دوره‌ها، قفل محتوا بر اساس اشتراک/ثبت‌نام و ردگیری پیشرفت یادگیرنده.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "education",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write", "users.read"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrLms\\": "" } }
+}

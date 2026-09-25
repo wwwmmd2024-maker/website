@@ -1,0 +1,14 @@
+{
+  "slug": "ir-membership",
+  "name": "IR Membership",
+  "version": "1.0.0",
+  "description": "عضویت و اشتراک: ثبت‌نام کاربران، پلن‌های اشتراک، کنترل دسترسی محتوای ویژه و مدیریت اشتراک‌ها.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "membership",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write", "users.read", "users.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrMembership\\": "" } }
+}

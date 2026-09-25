@@ -1,0 +1,14 @@
+{
+  "slug": "ir-security",
+  "name": "IR Security",
+  "version": "1.0.0",
+  "description": "لایه امنیتی تکمیلی: فایروال مسدودسازی/مجازسازی IP، نظارت بر تلاش‌های ورود و گزارش وضعیت امنیتی — همه روی نقاط توسعه هسته.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "security",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrSecurity\\": "" } }
+}
