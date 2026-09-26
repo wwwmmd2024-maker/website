@@ -33,19 +33,41 @@ try {
 } catch (\Throwable) {
     $pluginNav = [];
 }
+// White-label branding (Settings → برندینگ). Empty = default platform brand.
+$brandName = $t->get('app.name');
+$brandLogo = '';
+$brandFooter = '';
+try {
+    $wlOptions = \IRJalali\Core\Kernel\Application::get()
+        ->make(\IRJalali\App\Repositories\OptionRepository::class);
+    if (($wlOptions->get('admin_name', '')) !== '') {
+        $brandName = (string) $wlOptions->get('admin_name');
+    }
+    $brandLogo = (string) $wlOptions->get('admin_logo', '');
+    $brandFooter = (string) $wlOptions->get('admin_footer', '');
+} catch (\Throwable) {
+    // Branding is best-effort; the layout must never break.
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?= $t->locale() === 'fa_IR' ? 'fa' : 'en' ?>" dir="<?= $rtl ? 'rtl' : 'ltr' ?>">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?= e($title ?? $t->get('nav.dashboard')) ?> — <?= e($t->get('app.name')) ?></title>
+<title><?= e($title ?? $t->get('nav.dashboard')) ?> — <?= e($brandName) ?></title>
 <link rel="stylesheet" href="/assets/css/admin.css">
 </head>
 <body>
 <div class="shell">
   <aside class="sidebar">
-    <div class="brand"><span class="mark">آ</span><span><?= e($t->get('app.name')) ?></span></div>
+    <div class="brand">
+      <?php if ($brandLogo !== ''): ?>
+        <img src="<?= e($brandLogo) ?>" alt="<?= e($brandName) ?>" style="height:30px;border-radius:8px">
+      <?php else: ?>
+        <span class="mark">آ</span>
+      <?php endif; ?>
+      <span><?= e($brandName) ?></span>
+    </div>
     <nav>
       <?php foreach ($nav as $key => $item): ?>
         <a href="<?= e($item['url']) ?>" class="<?= $key === $active ? 'active' : '' ?>"><span class="ic"><?= e($item['icon']) ?></span><?= e($item['label']) ?></a>
@@ -77,6 +99,9 @@ try {
     <div class="content">
       <?= $sections['content'] ?? '' ?>
     </div>
+    <?php if ($brandFooter !== ''): ?>
+      <footer style="padding:14px 24px;color:#8b93c9;font-size:12px;border-top:1px solid var(--border,#e3e7f2)"><?= e($brandFooter) ?></footer>
+    <?php endif; ?>
   </div>
 </div>
 

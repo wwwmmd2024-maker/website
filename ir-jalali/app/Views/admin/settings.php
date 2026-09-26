@@ -28,3 +28,23 @@ $settings = $settings ?? [];
     <button class="btn" type="submit"><?= e($t->get('settings.save')) ?></button>
   </form>
 </div>
+
+<div class="panel">
+  <h3>برندینگ (وایت‌لیبل)</h3>
+  <p class="muted" style="font-size:13px">برای حذف برند پیش‌فرض پلتفرم از پنل مدیریت، مقادیر زیر را پر کنید. خالی بودن هر فیلد یعنی استفاده از برند پیش‌فرض.</p>
+  <form method="post" action="/admin/settings">
+    <?= $csrf->field() ?>
+    <input type="hidden" name="site_title" value="<?= e($settings['site_title'] ?? '') ?>">
+    <input type="hidden" name="language" value="<?= e($settings['language'] ?? 'fa_IR') ?>">
+    <input type="hidden" name="timezone" value="<?= e($settings['timezone'] ?? 'Asia/Tehran') ?>">
+    <input type="hidden" name="website_mode" value="<?= e($settings['website_mode'] ?? 'general') ?>">
+    <label>نام برند در پنل مدیریت</label>
+    <input type="text" name="admin_name" maxlength="80" value="<?= e($settings['admin_name'] ?? '') ?>" placeholder="مثلاً: سامانه مدیریت شرکت من">
+    <label>آدرس لوگوی پنل (اختیاری — از بخش رسانه آپلود کنید)</label>
+    <input type="text" name="admin_logo" dir="ltr" maxlength="255" value="<?= e($settings['admin_logo'] ?? '') ?>" placeholder="/uploads/.../logo.png">
+    <label>متن پاصفحه پنل</label>
+    <input type="text" name="admin_footer" maxlength="200" value="<?= e($settings['admin_footer'] ?? '') ?>" placeholder="© نام شرکت شما">
+    <br>
+    <button class="btn" type="submit"><?= e($t->get('settings.save')) ?></button>
+  </form>
+</div>

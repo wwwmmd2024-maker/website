@@ -45,12 +45,15 @@ final class SettingsController extends Controller
             return $denied;
         }
 
-        $data = $request->only('site_title', 'tagline', 'language', 'timezone', 'website_mode');
+        $data = $request->only('site_title', 'tagline', 'language', 'timezone', 'website_mode', 'admin_name', 'admin_logo', 'admin_footer');
         $validator = Validator::make($data, [
             'site_title' => 'required|max:150',
             'language' => 'required|in:fa_IR,en_US',
             'timezone' => 'required|max:40',
             'website_mode' => 'required|max:30',
+            'admin_name' => 'max:80',
+            'admin_logo' => 'max:255',
+            'admin_footer' => 'max:200',
         ]);
         if ($validator->fails()) {
             $this->withFlash('error', 'اطلاعات فرم نامعتبر است.');

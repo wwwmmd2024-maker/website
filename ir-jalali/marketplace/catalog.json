@@ -121,6 +121,21 @@
     },
     {
         "type": "plugin",
+        "slug": "ir-pwa",
+        "name": "IR PWA",
+        "description": "وب‌اپ پیش‌رونده: مانیفست داینامیک، سرویس‌ورکر (آفلاین\/کش دارایی‌ها) و آیکون نصب — بدون تغییر هسته.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "performance",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
         "slug": "ir-security",
         "name": "IR Security",
         "description": "لایه امنیتی تکمیلی: فایروال مسدودسازی\/مجازسازی IP، نظارت بر تلاش‌های ورود و گزارش وضعیت امنیتی — همه روی نقاط توسعه هسته.",
@@ -157,6 +172,21 @@
         "version": "1.0.0",
         "author": "IR-Jalali Core",
         "category": "communication",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-transfer",
+        "name": "IR Transfer",
+        "description": "انتقال محتوا: خروجی\/ورودی JSON محتوا (نوشته‌ها، برگه‌ها، منوها، فرم‌ها، تنظیمات) و کلون سایت از پشتیبان کامل.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "tools",
         "downloads": 0,
         "changelog": "انتشار اولیه 1.0.0",
         "requires": {

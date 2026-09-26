@@ -26,13 +26,17 @@ final class SettingsService
             'website_mode' => $this->options->get('website_mode', 'general'),
             'website_type' => $this->options->get('website_type', 'custom'),
             'setup_completed' => (bool) $this->options->get('setup_completed', false),
+            // White-label branding (empty = use the default platform brand).
+            'admin_name' => $this->options->get('admin_name', ''),
+            'admin_logo' => $this->options->get('admin_logo', ''),
+            'admin_footer' => $this->options->get('admin_footer', ''),
         ];
     }
 
     /** @param array<string, mixed> $data */
     public function update(array $data): void
     {
-        $allowed = ['site_title', 'tagline', 'language', 'timezone', 'website_mode'];
+        $allowed = ['site_title', 'tagline', 'language', 'timezone', 'website_mode', 'admin_name', 'admin_logo', 'admin_footer'];
         foreach ($allowed as $key) {
             if (array_key_exists($key, $data)) {
                 $this->options->set($key, (string) $data[$key]);

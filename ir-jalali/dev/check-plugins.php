@@ -114,7 +114,7 @@ check('CLI commands registered (' . count($commands) . ')', isset($commands['dem
 // Marketplace: catalog + packages + checksums.
 $provider = new \IRJalali\Core\Marketplace\LocalMarketplaceProvider(dirname(__DIR__) . '/marketplace');
 $items = $provider->search('plugin');
-check('marketplace catalog items (' . count($items) . ')', count($items) === 12);
+check('marketplace catalog items (' . count($items) . ')', count($items) === 14);
 $release = $provider->latestRelease('plugin', 'ir-seo');
 check('marketplace latestRelease ir-seo', $release !== null && $release['checksum'] !== '');
 if ($release !== null) {
