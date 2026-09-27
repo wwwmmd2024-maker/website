@@ -11,7 +11,8 @@
     Require all denied
 </FilesMatch>
 
-# Uploaded files: never execute PHP from uploads
-<IfModule mod_php.c>
-    php_flag engine off
-</IfModule>
+# NOTE: uploaded files live in storage/uploads (OUTSIDE the document root)
+# and are served through the media controller, so PHP can never execute
+# there. A global "php_flag engine off" used to sit here, but on hosts that
+# run PHP as an Apache module (e.g. WAMP/XAMPP) it disabled PHP for the
+# whole site and browsers downloaded index.php instead of rendering it.

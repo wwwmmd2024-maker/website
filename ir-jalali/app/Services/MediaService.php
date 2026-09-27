@@ -203,10 +203,12 @@ final class MediaService
                     'gif' => imagegif($canvas, $dest),
                     default => null,
                 };
-                imagedestroy($canvas);
+                // GD objects are reference-counted on PHP 8+; imagedestroy()
+                // is a deprecated no-op since PHP 8.0/8.5.
+                unset($canvas);
                 @chmod($dest, 0644);
             }
-            imagedestroy($image);
+            unset($image);
         } catch (\Throwable) {
             // Thumbnails are best-effort; the original is already stored safely.
         }

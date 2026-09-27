@@ -33,6 +33,7 @@ use IRJalali\App\Controllers\Api\StatusController;
 use IRJalali\App\Controllers\AuthController;
 use IRJalali\App\Controllers\FrontController;
 use IRJalali\App\Controllers\HomeController;
+use IRJalali\App\Controllers\StorageAssetController;
 use IRJalali\App\Controllers\ThemeAssetController;
 use IRJalali\App\Controllers\InstallController;
 use IRJalali\App\Controllers\SetupController;
@@ -223,6 +224,11 @@ $router->group(['prefix' => 'api/v1', 'middleware' => [SecurityHeaders::class, R
 // ── Theme assets (jailed proxy; themes live outside docroot) ─────────
 $router->group(['middleware' => [...$web, RequireInstalled::class]], function (Router $r): void {
     $r->get('/theme-assets/{theme}/{file*}', [ThemeAssetController::class, 'show'])->name('theme.asset');
+});
+
+// ── Uploaded media (jailed proxy; storage/uploads lives outside docroot) ──
+$router->group(['middleware' => [...$web, RequireInstalled::class]], function (Router $r): void {
+    $r->get('/storage/uploads/{file*}', [StorageAssetController::class, 'show'])->name('storage.asset');
 });
 
 // ── Frontend (theme engine) ──────────────────────────────────────
