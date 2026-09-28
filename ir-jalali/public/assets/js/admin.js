@@ -17,6 +17,8 @@
   var list = document.getElementById('paletteList');
   var trigger = document.getElementById('paletteTrigger');
   var commands = [];
+  // The palette must start closed on every page load.
+  if (overlay) overlay.hidden = true;
   var selected = 0;
 
   var blob = document.getElementById('paletteCommands');
@@ -86,14 +88,14 @@
 
   // Media drag & drop upload.
   var drop = document.getElementById('dropzone');
-  var input = document.getElementById('fileinput');
-  if (!drop || !input) return;
+  var fileInput = document.getElementById('fileinput');
+  if (!drop || !fileInput) return;
 
   var token = drop.getAttribute('data-token') || '';
   var status = document.getElementById('upload-status');
 
-  drop.addEventListener('click', function () { input.click(); });
-  input.addEventListener('change', function () { upload(input.files); input.value = ''; });
+  drop.addEventListener('click', function () { fileInput.click(); });
+  fileInput.addEventListener('change', function () { upload(fileInput.files); fileInput.value = ''; });
 
   ['dragenter', 'dragover'].forEach(function (ev) {
     drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('over'); });

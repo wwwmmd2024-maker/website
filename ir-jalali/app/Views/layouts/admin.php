@@ -48,6 +48,13 @@ try {
 } catch (\Throwable) {
     // Branding is best-effort; the layout must never break.
 }
+// Cache-busting: append the file's mtime so browsers always fetch the
+// current stylesheet/script after an update (no stale CSS after upgrades).
+$assetUrl = static function (string $path): string {
+    $file = dirname(__DIR__, 3) . '/public' . $path;
+    $mtime = is_file($file) ? (int) filemtime($file) : 0;
+    return $mtime > 0 ? $path . '?v=' . $mtime : $path;
+};
 ?>
 <!DOCTYPE html>
 <html lang="<?= $t->locale() === 'fa_IR' ? 'fa' : 'en' ?>" dir="<?= $rtl ? 'rtl' : 'ltr' ?>">
@@ -55,11 +62,12 @@ try {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title ?? $t->get('nav.dashboard')) ?> — <?= e($brandName) ?></title>
-<link rel="stylesheet" href="/assets/css/admin.css">
+<link rel="stylesheet" href="<?= e($assetUrl('/assets/css/admin.css')) ?>">
 </head>
 <body>
 <div class="shell">
   <aside class="sidebar">
+   <div class="sidebar-inner">
     <div class="brand">
       <?php if ($brandLogo !== ''): ?>
         <img src="<?= e($brandLogo) ?>" alt="<?= e($brandName) ?>" style="height:30px;border-radius:8px">
@@ -82,6 +90,7 @@ try {
     <div class="side-foot">
       <a href="/" target="_blank" rel="noopener">↗ <?= e($t->get('nav.view_site')) ?></a>
     </div>
+   </div>
   </aside>
   <div class="main">
     <header class="topbar">
@@ -132,6 +141,6 @@ try {
     ['label' => $t->get('palette.clear_cache'), 'url' => '/admin?clear_cache=1'],
     ['label' => $t->get('nav.view_site'), 'url' => '/'],
 ], fn ($c) => is_array($c) && isset($c['label'], $c['url']))), JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>
-<script src="/assets/js/admin.js"></script>
+<script src="<?= e($assetUrl('/assets/js/admin.js')) ?>"></script>
 </body>
 </html>
