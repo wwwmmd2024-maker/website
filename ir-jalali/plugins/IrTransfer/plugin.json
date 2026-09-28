@@ -1,0 +1,14 @@
+{
+  "slug": "ir-transfer",
+  "name": "IR Transfer",
+  "version": "1.0.0",
+  "description": "انتقال محتوا: خروجی/ورودی JSON محتوا (نوشته‌ها، برگه‌ها، منوها، فرم‌ها، تنظیمات) و کلون سایت از پشتیبان کامل.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "tools",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "database.read", "database.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrTransfer\\": "" } }
+}

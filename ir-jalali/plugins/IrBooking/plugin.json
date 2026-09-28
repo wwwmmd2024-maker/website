@@ -1,0 +1,14 @@
+{
+  "slug": "ir-booking",
+  "name": "IR Booking",
+  "version": "1.0.0",
+  "description": "رزرواسیون آنلاین: خدمات وقت‌دهی، انتخاب تاریخ و ساعت، مدیریت رزروها و تنظیمات ساعات کاری.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "booking",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrBooking\\": "" } }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "IR Dark",
+  "slug": "ir-dark",
+  "version": "1.1.0",
+  "author": "IR-Jalali Core",
+  "description": "قالب تیره مدرن آیری‌جلالی",
+  "requires": { "ir-jalali": ">=1.0.0" },
+  "supports": ["builder", "widgets", "menus", "featured-image", "rtl", "dark"],
+  "settings": { "sidebar": true, "container": "1200px" },
+  "templates": ["index", "singular", "page", "single", "archive", "search", "404"],
+  "templateParts": ["header", "footer"]
+}

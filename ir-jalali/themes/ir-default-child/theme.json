@@ -1,0 +1,13 @@
+{
+  "name": "IR Default Child",
+  "slug": "ir-default-child",
+  "version": "1.0.0",
+  "author": "IR-Jalali Core",
+  "description": "چایلدتم نمایشی قالب پیش‌فرض (ارث‌بری + اورراید)",
+  "parent": "ir-default",
+  "requires": { "ir-jalali": ">=1.0.0" },
+  "supports": ["builder", "widgets", "menus", "featured-image", "rtl"],
+  "settings": {},
+  "templates": ["page"],
+  "templateParts": []
+}

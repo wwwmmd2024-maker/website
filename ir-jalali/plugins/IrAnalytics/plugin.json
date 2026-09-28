@@ -1,0 +1,14 @@
+{
+  "slug": "ir-analytics",
+  "name": "IR Analytics",
+  "version": "1.0.0",
+  "description": "آمار بازدید سبک و بدون وابستگی خارجی: ثبت بازدید صفحات، منابع ورود، تشخیص ربات و داشبورد مدیریتی با نمودار.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "analytics",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrAnalytics\\": "" } }
+}

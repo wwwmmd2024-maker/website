@@ -1,0 +1,14 @@
+{
+  "slug": "ir-seo",
+  "name": "IR SEO",
+  "version": "1.0.0",
+  "description": "موتور سئو: متا تایتل/توضیحات، Canonical، OpenGraph، Twitter Cards، Schema.org، نقشه سایت XML، robots.txt، مدیریت ریدایرکت و مانیتور 404.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "seo",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrSeo\\": "" } }
+}

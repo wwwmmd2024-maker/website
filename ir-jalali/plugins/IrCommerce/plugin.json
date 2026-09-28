@@ -1,0 +1,14 @@
+{
+  "slug": "ir-commerce",
+  "name": "IR Commerce",
+  "version": "1.0.0",
+  "description": "فروشگاه‌ساز: نوع محتوای محصول، سبد خرید جلسه‌ای، صفحه پرداخت، سفارش‌ها با مدیریت وضعیت و کنترل موجودی — بدون وابستگی به هسته.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "commerce",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write", "users.read"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrCommerce\\": "" } }
+}

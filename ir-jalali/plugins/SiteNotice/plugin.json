@@ -1,0 +1,11 @@
+{
+  "slug": "site-notice",
+  "name": "اعلان سایت",
+  "version": "1.0.0",
+  "description": "نمایش نوار اعلان بالای سایت + بلاک، برگه تنظیمات و شمارش بازدید. نمونه مرجع Plugin API.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\SiteNotice\\": "" } }
+}

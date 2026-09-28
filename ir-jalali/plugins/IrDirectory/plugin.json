@@ -1,0 +1,14 @@
+{
+  "slug": "ir-directory",
+  "name": "IR Directory",
+  "version": "1.0.0",
+  "description": "دایرکتوری و نیازمندی‌ها: ثبت آگهی توسط بازدیدکنندگان (در انتظار بررسی)، جستجو و مدیریت آگهی‌ها.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "directory",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrDirectory\\": "" } }
+}

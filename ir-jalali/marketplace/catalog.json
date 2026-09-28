@@ -1,0 +1,212 @@
+[
+    {
+        "type": "plugin",
+        "slug": "ir-analytics",
+        "name": "IR Analytics",
+        "description": "آمار بازدید سبک و بدون وابستگی خارجی: ثبت بازدید صفحات، منابع ورود، تشخیص ربات و داشبورد مدیریتی با نمودار.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "analytics",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-booking",
+        "name": "IR Booking",
+        "description": "رزرواسیون آنلاین: خدمات وقت‌دهی، انتخاب تاریخ و ساعت، مدیریت رزروها و تنظیمات ساعات کاری.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "booking",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-cache",
+        "name": "IR Cache",
+        "description": "لایه کش: کش کامل صفحات (Page Cache) برای بازدیدکنندگان مهمان، کش فرگمنت برای توسعه‌دهندگان و پاک‌سازی دستی\/زمان‌بندی‌شده. بدون نیاز به Redis.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "performance",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-commerce",
+        "name": "IR Commerce",
+        "description": "فروشگاه‌ساز: نوع محتوای محصول، سبد خرید جلسه‌ای، صفحه پرداخت، سفارش‌ها با مدیریت وضعیت و کنترل موجودی — بدون وابستگی به هسته.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "commerce",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-demo",
+        "name": "IR Demo",
+        "description": "افزونه نمونه رسمی: تمام قابلیت‌های Plugin API را به‌صورت واقعی تمرین می‌کند — CPT، فیلد سفارشی، بلاک، ویجت، صفحه ادمین، اندپوینت REST، تنظیمات، هوک، رویداد و مایگریشن.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "developer",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-directory",
+        "name": "IR Directory",
+        "description": "دایرکتوری و نیازمندی‌ها: ثبت آگهی توسط بازدیدکنندگان (در انتظار بررسی)، جستجو و مدیریت آگهی‌ها.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "directory",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-lms",
+        "name": "IR LMS",
+        "description": "آموزش آنلاین: دوره و درس، ثبت‌نام در دوره‌ها، قفل محتوا بر اساس اشتراک\/ثبت‌نام و ردگیری پیشرفت یادگیرنده.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "education",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-membership",
+        "name": "IR Membership",
+        "description": "عضویت و اشتراک: ثبت‌نام کاربران، پلن‌های اشتراک، کنترل دسترسی محتوای ویژه و مدیریت اشتراک‌ها.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "membership",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-pwa",
+        "name": "IR PWA",
+        "description": "وب‌اپ پیش‌رونده: مانیفست داینامیک، سرویس‌ورکر (آفلاین\/کش دارایی‌ها) و آیکون نصب — بدون تغییر هسته.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "performance",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-security",
+        "name": "IR Security",
+        "description": "لایه امنیتی تکمیلی: فایروال مسدودسازی\/مجازسازی IP، نظارت بر تلاش‌های ورود و گزارش وضعیت امنیتی — همه روی نقاط توسعه هسته.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "security",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-seo",
+        "name": "IR SEO",
+        "description": "موتور سئو: متا تایتل\/توضیحات، Canonical، OpenGraph، Twitter Cards، Schema.org، نقشه سایت XML، robots.txt، مدیریت ریدایرکت و مانیتور 404.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "seo",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-smtp",
+        "name": "IR SMTP",
+        "description": "زیرساخت ایمیل: ارسال با SMTP (با صف، قالب و لاگ). افزونه‌های دیگر برای ارسال ایمیل به این ماژول وابسته‌اند.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "communication",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "ir-transfer",
+        "name": "IR Transfer",
+        "description": "انتقال محتوا: خروجی\/ورودی JSON محتوا (نوشته‌ها، برگه‌ها، منوها، فرم‌ها، تنظیمات) و کلون سایت از پشتیبان کامل.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "tools",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    },
+    {
+        "type": "plugin",
+        "slug": "site-notice",
+        "name": "اعلان سایت",
+        "description": "نمایش نوار اعلان بالای سایت + بلاک، برگه تنظیمات و شمارش بازدید. نمونه مرجع Plugin API.",
+        "version": "1.0.0",
+        "author": "IR-Jalali Core",
+        "category": "general",
+        "downloads": 0,
+        "changelog": "انتشار اولیه 1.0.0",
+        "requires": {
+            "core": ">=1.1.0",
+            "php": ">=8.2"
+        }
+    }
+]

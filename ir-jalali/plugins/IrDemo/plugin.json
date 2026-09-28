@@ -1,0 +1,14 @@
+{
+  "slug": "ir-demo",
+  "name": "IR Demo",
+  "version": "1.0.0",
+  "description": "افزونه نمونه رسمی: تمام قابلیت‌های Plugin API را به‌صورت واقعی تمرین می‌کند — CPT، فیلد سفارشی، بلاک، ویجت، صفحه ادمین، اندپوینت REST، تنظیمات، هوک، رویداد و مایگریشن.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "developer",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrDemo\\": "" } }
+}

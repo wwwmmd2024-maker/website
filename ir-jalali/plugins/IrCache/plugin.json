@@ -1,0 +1,14 @@
+{
+  "slug": "ir-cache",
+  "name": "IR Cache",
+  "version": "1.0.0",
+  "description": "لایه کش: کش کامل صفحات (Page Cache) برای بازدیدکنندگان مهمان، کش فرگمنت برای توسعه‌دهندگان و پاک‌سازی دستی/زمان‌بندی‌شده. بدون نیاز به Redis.",
+  "author": "IR-Jalali Core",
+  "license": "MIT",
+  "category": "performance",
+  "requires": { "core": ">=1.1.0", "php": ">=8.2" },
+  "api": "v1",
+  "dependencies": [],
+  "capabilities": ["admin.access", "settings.read", "settings.write", "database.read", "database.write", "filesystem.read", "filesystem.write"],
+  "autoload": { "psr-4": { "IRJalali\\Plugins\\IrCache\\": "" } }
+}
